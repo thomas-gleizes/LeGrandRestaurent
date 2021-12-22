@@ -18,5 +18,4 @@ public class Serveur {
         this.ChiffreAffaires += montantCommande;
     }
 
-
 }

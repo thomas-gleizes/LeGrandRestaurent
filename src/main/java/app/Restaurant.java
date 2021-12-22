@@ -1,3 +1,5 @@
+package app;
+
 public class Restaurant {
     private final Serveur[] _serveurs;
 

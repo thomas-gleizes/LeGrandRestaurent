@@ -1,42 +1,43 @@
-import org.junit.jupiter.api.BeforeEach;
+import app.Serveur;
+import app.utils.ServeurBuilder;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ServeurTest {
 
-    private Serveur serveur;
+    private static ServeurBuilder builder;
 
-    @BeforeEach
-    void setup() {
-        serveur = new Serveur("Thomas", 1002);
+    @BeforeAll
+    static void setup() {
+        builder = new ServeurBuilder();
     }
 
     @Test
-    void setChiffreAffaires() {
-        serveur.setChiffreAffaires(10);
+    void testCAPositifFloat() {
+        Serveur serveur = builder.nomme("thomas").build();
+        float montant = (float) -20.54;
 
-        assertEquals(10, serveur.getChiffreAffaires());
+        serveur.PrendreCommande(montant);
+        assertEquals(montant, serveur.ChiffreAffaires);
     }
 
     @Test
-    void prendreCommandeA10e() {
-        serveur.PrendreCommande(10);
+    void testCaNegatif() {
+        Serveur serveur = builder.nomme("Thomas").build();
+        float montant = (float) -20.54;
 
-        assertEquals(10, serveur.ChiffreAffaires);
+        serveur.PrendreCommande(montant);
+        assertEquals(montant, serveur.ChiffreAffaires);
     }
 
     @Test
-    void prendreCommandeAmoins10E() {
-        serveur.PrendreCommande(-10);
+    void testCaZero() {
+        Serveur serveur = builder.nomme("serveur").build();
+        int montant = 0;
 
-        assertEquals(-10, serveur.ChiffreAffaires);
-    }
-
-    @Test
-    void prendreCommandeAZero() {
-        serveur.PrendreCommande(0);
-
-        assertEquals(0, serveur.ChiffreAffaires);
+        serveur.PrendreCommande(montant);
+        assertEquals(montant, serveur.ChiffreAffaires);
     }
 }

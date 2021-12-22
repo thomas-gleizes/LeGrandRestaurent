@@ -1,3 +1,5 @@
+package app;
+
 public class Franchise {
 
     private final Restaurant[] _restaurants;

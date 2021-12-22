@@ -1,3 +1,5 @@
+package app;
+
 public class Serveur {
     public float ChiffreAffaires;
 
@@ -12,7 +14,6 @@ public class Serveur {
     public void setChiffreAffaires(float chiffreAffaires) {
         ChiffreAffaires = chiffreAffaires;
     }
-
 
     public void PrendreCommande(float montantCommande) {
         this.ChiffreAffaires += montantCommande;

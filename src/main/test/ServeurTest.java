@@ -40,4 +40,24 @@ class ServeurTest {
         serveur.PrendreCommande(montant);
         assertEquals(montant, serveur.ChiffreAffaires);
     }
+
+    @Test
+    void testNouveauServeurCAequalAZero() {
+        Serveur serveur = builder.nomme("serveur").build();
+
+        assertEquals(0, serveur.getChiffreAffaires());
+    }
+
+    @Test
+    void testDoublecommanded() {
+        Serveur serveur = builder.nomme("double").build();
+
+        float montant1 = (float) 10.3;
+        float montant2 = (float) 30.2;
+
+        serveur.PrendreCommande(montant1);
+        serveur.PrendreCommande(montant2);
+
+        assertEquals(montant1 + montant2, serveur.getChiffreAffaires());
+    }
 }

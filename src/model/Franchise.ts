@@ -1,5 +1,4 @@
 import Restaurent from "./Restaurent";
-import restaurent from "./Restaurent";
 
 class Franchise {
   private _restaurants: Restaurent[];
@@ -15,3 +14,5 @@ class Franchise {
     );
   }
 }
+
+export default Franchise;

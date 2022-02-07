@@ -1,0 +1,7 @@
+C:\Users\Totosh\Desktop\RPG2\RPG\RPG\bin\Debug\RPG.exe.config
+C:\Users\Totosh\Desktop\RPG2\RPG\RPG\bin\Debug\RPG.exe
+C:\Users\Totosh\Desktop\RPG2\RPG\RPG\bin\Debug\RPG.pdb
+C:\Users\Totosh\Desktop\RPG2\RPG\RPG\obj\Debug\RPG.csprojAssemblyReference.cache
+C:\Users\Totosh\Desktop\RPG2\RPG\RPG\obj\Debug\RPG.csproj.CoreCompileInputs.cache
+C:\Users\Totosh\Desktop\RPG2\RPG\RPG\obj\Debug\RPG.exe
+C:\Users\Totosh\Desktop\RPG2\RPG\RPG\obj\Debug\RPG.pdb
